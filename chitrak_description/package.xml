@@ -3,7 +3,7 @@
 <package format="3">
   <name>chitrak_description</name>
   <version>0.0.0</version>
-  <description>URDF description for Chitrak</description>
+  <description>URDF description for the Chitrak robot</description>
   <maintainer email="devashravan7@gmail.com">Shravan Deva</maintainer>
   <license>MIT</license>
 
