@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<!-- Make changes at your own risk -->
+<robot
+  name="chitrak_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00238868927667727 -1.23101962146306E-05 -0.0259410834694735"
+        rpy="0 0 0" />
+      <mass
+        value="0.531017962368296" />
+      <inertia
+        ixx="0.000784647282302847"
+        ixy="-1.56473712454285E-07"
+        ixz="-3.54024444284505E-06"
+        iyy="0.000983761380504374"
+        iyz="4.46505765897836E-08"
+        izz="0.00139027431723193" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="fr_hip_link">
+    <inertial>
+      <origin
+        xyz="0.0322826456698624 -0.000429460670132026 -0.0140006460468479"
+        rpy="0 0 0" />
+      <mass
+        value="0.108648639391851" />
+      <inertia
+        ixx="2.69803474781915E-05"
+        ixy="-8.80967987556737E-08"
+        ixz="-5.44555996170503E-09"
+        iyy="4.61678276210887E-05"
+        iyz="-3.56636801717859E-08"
+        izz="4.28733000741258E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/fr_hip_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/fr_hip_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fr_hip_roll_joint"
+    type="revolute">
+    <origin
+      xyz="0.1034 -0.0557689357599999 -0.018465"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="fr_hip_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fr_thigh_link">
+    <inertial>
+      <origin
+        xyz="-0.0626114782296221 -0.00685326400526645 5.4771380791907E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0357822939678729" />
+      <inertia
+        ixx="1.82903525937341E-06"
+        ixy="2.15935075243341E-07"
+        ixz="-2.9723814137515E-12"
+        iyy="1.62889851478768E-05"
+        iyz="1.38202710627414E-11"
+        izz="1.56570192882523E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/fr_thigh_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/fr_thigh_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fr_hip_pitch_joint"
+    type="revolute">
+    <origin
+      xyz="0.0220549999999999 -0.021 0.000410000000000049"
+      rpy="0 0 0" />
+    <parent
+      link="fr_hip_link" />
+    <child
+      link="fr_thigh_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fr_calf_link">
+    <inertial>
+      <origin
+        xyz="0.0724501084741344 -0.00768913764949204 -0.016189558522504"
+        rpy="0 0 0" />
+      <mass
+        value="0.0489996592044007" />
+      <inertia
+        ixx="7.01622854548788E-06"
+        ixy="-1.05533550815407E-06"
+        ixz="7.42615947085768E-06"
+        iyy="3.61411874632668E-05"
+        iyz="6.49288500493328E-07"
+        izz="3.45164870583299E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/fr_calf_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/fr_calf_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fr_knee_joint"
+    type="revolute">
+    <origin
+      xyz="-0.13 5.00000000004802E-05 0"
+      rpy="0 0 0" />
+    <parent
+      link="fr_thigh_link" />
+    <child
+      link="fr_calf_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fl_hip_link">
+    <inertial>
+      <origin
+        xyz="0.0319881655901347 0.00041006097321835 -0.0140990846243295"
+        rpy="0 0 0" />
+      <mass
+        value="0.10854268640342" />
+      <inertia
+        ixx="2.69792196637052E-05"
+        ixy="8.7562009673017E-08"
+        ixz="-4.39624893284498E-09"
+        iyy="4.61463606969833E-05"
+        iyz="-4.17749420685969E-10"
+        izz="4.28244714163397E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/fl_hip_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/fl_hip_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fl_hip_roll_joint"
+    type="revolute">
+    <origin
+      xyz="0.1034 0.0557689357600009 -0.0184649999999999"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="fl_hip_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fl_thigh_link">
+    <inertial>
+      <origin
+        xyz="-0.062611 0.0068533 -5.4771E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.035782" />
+      <inertia
+        ixx="1.829E-06"
+        ixy="-2.1594E-07"
+        ixz="2.9724E-12"
+        iyy="1.6289E-05"
+        iyz="1.382E-11"
+        izz="1.5657E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/fl_thigh_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/fl_thigh_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fl_hip_pitch_joint"
+    type="revolute">
+    <origin
+      xyz="0.0215750000000005 0.0209999999999998 0"
+      rpy="0 0 0" />
+    <parent
+      link="fl_hip_link" />
+    <child
+      link="fl_thigh_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fl_calf_link">
+    <inertial>
+      <origin
+        xyz="0.0724809018472975 0.00768626053965757 -0.0162002299958432"
+        rpy="0 0 0" />
+      <mass
+        value="0.0489855091798814" />
+      <inertia
+        ixx="7.00076258765256E-06"
+        ixy="1.06344924655147E-06"
+        ixz="7.40498912888899E-06"
+        iyy="3.60933899371474E-05"
+        iyz="-6.52952403984501E-07"
+        izz="3.44788847366438E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/fl_calf_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/fl_calf_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fl_knee_joint"
+    type="revolute">
+    <origin
+      xyz="-0.13 -4.99999999997447E-05 0"
+      rpy="0 0 0" />
+    <parent
+      link="fl_thigh_link" />
+    <child
+      link="fl_calf_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="br_hip_link">
+    <inertial>
+      <origin
+        xyz="-0.032135543416442 -0.000410060973218468 -0.013973199397692"
+        rpy="0 0 0" />
+      <mass
+        value="0.10854268640342" />
+      <inertia
+        ixx="2.69792196637053E-05"
+        ixy="8.75620096729818E-08"
+        ixz="4.39624893285847E-09"
+        iyy="4.61463606969833E-05"
+        iyz="4.17749420667756E-10"
+        izz="4.28244714163397E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/br_hip_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/br_hip_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="br_hip_roll_joint"
+    type="revolute">
+    <origin
+      xyz="-0.1034 -0.0557689357600001 -0.0184649999999999"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="br_hip_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="br_thigh_link">
+    <inertial>
+      <origin
+        xyz="-0.0626114782296221 -0.00685326400526678 5.47713807641514E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0357822939678729" />
+      <inertia
+        ixx="1.82903525937341E-06"
+        ixy="2.15935075243268E-07"
+        ixz="-2.97238141639413E-12"
+        iyy="1.62889851478768E-05"
+        iyz="1.38202710644727E-11"
+        izz="1.56570192882523E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/br_thigh_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/br_thigh_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="br_hip_pitch_joint"
+    type="revolute">
+    <origin
+      xyz="-0.041945 -0.0209999999999999 0.000409999999999938"
+      rpy="0 0 0" />
+    <parent
+      link="br_hip_link" />
+    <child
+      link="br_thigh_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="br_calf_link">
+    <inertial>
+      <origin
+        xyz="0.0724501084741344 -0.0076891376494919 -0.016189558522504"
+        rpy="0 0 0" />
+      <mass
+        value="0.0489996592044007" />
+      <inertia
+        ixx="7.01622854548784E-06"
+        ixy="-1.05533550815411E-06"
+        ixz="7.42615947085765E-06"
+        iyy="3.61411874632668E-05"
+        iyz="6.49288500493334E-07"
+        izz="3.45164870583299E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/br_calf_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/br_calf_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="br_knee_joint"
+    type="revolute">
+    <origin
+      xyz="-0.13 4.99999999997308E-05 0"
+      rpy="0 0 0" />
+    <parent
+      link="br_thigh_link" />
+    <child
+      link="br_calf_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="bl_hip_link">
+    <inertial>
+      <origin
+        xyz="-0.0319881774598005 0.000429460670132019 -0.0140006460468479"
+        rpy="0 0 0" />
+      <mass
+        value="0.108648639391851" />
+      <inertia
+        ixx="2.69803474781915E-05"
+        ixy="-8.80967987556525E-08"
+        ixz="5.44555996171056E-09"
+        iyy="4.61678276210886E-05"
+        iyz="3.56636801717788E-08"
+        izz="4.28733000741258E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/bl_hip_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/bl_hip_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bl_hip_roll_joint"
+    type="revolute">
+    <origin
+      xyz="-0.1034 0.055769 -0.018465"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="bl_hip_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="bl_thigh_link">
+    <inertial>
+      <origin
+        xyz="-0.0626114782296221 0.00685326400526652 -5.47713807988459E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0357822939678729" />
+      <inertia
+        ixx="1.82903525937341E-06"
+        ixy="-2.15935075243323E-07"
+        ixz="2.97238141685938E-12"
+        iyy="1.62889851478768E-05"
+        iyz="1.38202710631286E-11"
+        izz="1.56570192882523E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/bl_thigh_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/bl_thigh_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bl_hip_pitch_joint"
+    type="revolute">
+    <origin
+      xyz="-0.041945 0.021 0.00041"
+      rpy="0 0 0" />
+    <parent
+      link="bl_hip_link" />
+    <child
+      link="bl_thigh_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="bl_calf_link">
+    <inertial>
+      <origin
+        xyz="0.0724809018472974 0.00768626053965776 -0.0162002299958433"
+        rpy="0 0 0" />
+      <mass
+        value="0.0489855091798813" />
+      <inertia
+        ixx="7.00076258765258E-06"
+        ixy="1.0634492465514E-06"
+        ixz="7.40498912888901E-06"
+        iyy="3.60933899371474E-05"
+        iyz="-6.5295240398448E-07"
+        izz="3.44788847366437E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/bl_calf_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chitrak_description/meshes/bl_calf_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bl_knee_joint"
+    type="revolute">
+    <origin
+      xyz="-0.13 -5E-05 0"
+      rpy="0 0 0" />
+    <parent
+      link="bl_thigh_link" />
+    <child
+      link="bl_calf_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
