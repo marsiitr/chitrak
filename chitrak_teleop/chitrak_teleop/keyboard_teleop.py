@@ -15,8 +15,8 @@ class KeyboardTeleop(Node):
         self.wz = 0.0
 
         # Step sizes
-        self.linear_step = 0.05
-        self.angular_step = 0.1
+        self.linear_step = 1 # cm/s
+        self.angular_step = 5 # degrees/s
 
         # Start keyboard listener
         self.listener = keyboard.Listener(on_press=self.on_press)
@@ -68,13 +68,13 @@ class KeyboardTeleop(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    teleop_node = KeyboardTeleop()
+    keyboard_teleop = KeyboardTeleop()
 
     try:
-        rclpy.spin(teleop_node)
+        rclpy.spin(keyboard_teleop)
     finally:
-        teleop_node.listener.stop()
-        teleop_node.destroy_node()
+        keyboard_teleop.listener.stop()
+        keyboard_teleop.destroy_node()
         rclpy.shutdown()
 
 if __name__ == '__main__':
