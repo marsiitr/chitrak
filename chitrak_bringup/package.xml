@@ -3,7 +3,7 @@
 <package format="3">
   <name>chitrak_bringup</name>
   <version>0.0.0</version>
-  <description>bringup package for Chitrak robot</description>
+  <description>Bringup package for Chitrak robot</description>
   <maintainer email="devashravan7@gmail.com">Shravan Deva</maintainer>
   <license>MIT</license>
 

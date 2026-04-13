@@ -21,8 +21,8 @@ setup(
     zip_safe=True,
     maintainer='shravan',
     maintainer_email='devashravan7@gmail.com',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    description='Bringup package for Chitrak robot',
+    license='MIT',
     extras_require={
         'test': [
             'pytest',

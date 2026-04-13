@@ -15,8 +15,8 @@ setup(
     zip_safe=True,
     maintainer='shravan',
     maintainer_email='devashravan7@gmail.com',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    description='Leg controller package for Chitrak',
+    license='MIT',
     extras_require={
         'test': [
             'pytest',
