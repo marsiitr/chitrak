@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'chitrak_gait'
+package_name = 'chitrak_gait_controller'
 
 setup(
     name=package_name,

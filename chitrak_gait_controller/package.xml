@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>chitrak_gait</name>
+  <name>chitrak_gait_controller</name>
   <version>0.0.0</version>
   <description>Gait planning package for Chitrak</description>
   <maintainer email="devashravan7@gmail.com">Shravan Deva</maintainer>
