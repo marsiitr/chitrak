@@ -13,7 +13,7 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='shravan',
+    maintainer='Shravan Deva',
     maintainer_email='devashravan7@gmail.com',
     description='Teleoperation package for Chitrak',
     license='MIT',
@@ -24,6 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'keyboard_teleop = chitrak_teleop.keyboard_teleop:main',
         ],
     },
 )

@@ -13,7 +13,7 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='shravan',
+    maintainer='Shravan Deva',
     maintainer_email='devashravan7@gmail.com',
     description='Hardware interface package for Chitrak',
     license='MIT',

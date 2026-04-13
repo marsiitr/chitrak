@@ -19,7 +19,7 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='shravan',
+    maintainer='Shravan Deva',
     maintainer_email='devashravan7@gmail.com',
     description='URDF description for the Chitrak robot',
     license='MIT',
